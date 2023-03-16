@@ -1,5 +1,9 @@
 # YourGamePanel 🕹️
 
+<p align="center">
+  <img src="https://github.com/thompsonemerson/thompsonemerson/raw/master/cover-thompson.png" />
+</p>
+
 YourGamePanel is a self-hosted web application that lets you create a customizable dashboard for your store. With YourGamePanel, you can monitor sales 📈, track inventory 📊, manage orders 🛍️, and much more. The application is designed to be easy to use and customizable, so you can create a dashboard that meets your specific needs.
 
 ## Features 🚀
