@@ -46,7 +46,16 @@ To install YourGamePanel, you'll need to have the following dependencies install
 
 <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>Support</b> :)</em>
 
----
+```php
+<?php
+$fileBrute = array(
+  "code" => array("PHP", "JavaScript", "HTML", "CSS", "Python"),
+  "contactme" => array(
+    "discord" => "Dominick#0001"
+  )
+);
+?>
+```
 
 <p href="https://discord.gg/ptools" align="center">
     <img alt="Discord Presence" src=https://lanyard.cnrad.dev/api/675871691058184192/>
