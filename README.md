@@ -51,7 +51,7 @@ To install YourGamePanel, you'll need to have the following dependencies install
 $fileBrute = array(
   "code" => array("PHP", "JavaScript", "HTML", "CSS", "Python"),
   "contactme" => array(
-    "discord" => "Dominick#0001"
+    "discord" => "Dominick#0002"
   )
 );
 ?>
