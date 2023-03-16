@@ -43,6 +43,11 @@ To install YourGamePanel, you'll need to have the following dependencies install
 - `mysql -u <username> -p <database_name> < yourgamepanel.sql`
 - Edit the server/connection.php file with your MySQL database details.
 
+## Paid Themes 🛠️
+- In addition to the default theme that comes with YourGamePanel, we also offer a variety of premium themes for purchase. These themes are designed by professional designers and can help give your dashboard a unique and polished look.
+
+- To purchase a theme, simply visit our website and select the theme that best fits your needs. Once you've purchased a theme, you can easily install it in YourGamePanel with just a few clicks.
+
 ## Tech Stack 💻
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Php](https://img.shields.io/badge/php-%230db7ed.svg?style=for-the-badge&logo=php&logoColor=white)
 
