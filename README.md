@@ -43,3 +43,11 @@ To install YourGamePanel, you'll need to have the following dependencies install
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Php](https://img.shields.io/badge/php-%230db7ed.svg?style=for-the-badge&logo=php&logoColor=white)
 
 ![alt text](https://github.com/FileBrute/YourGamePanel/blob/cc046de3628ed60f1ed44b152f64cf1c09ec9f59/img/Capture.PNG)
+
+<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>Support</b> :)</em>
+
+---
+
+<p href="https://discord.gg/ptools" align="center">
+    <img alt="Discord Presence" src=https://lanyard.cnrad.dev/api/675871691058184192/>
+</p>
