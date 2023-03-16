@@ -21,7 +21,7 @@ To get started with YourGamePanel, you'll need to follow these steps:
 2. Install the required dependencies (see the "Installation" section below).
 3. Run the application using a web server of your choice (e.g., Apache, Nginx).
 
-## Installation
+## Installation 🚀
 To install YourGamePanel, you'll need to have the following dependencies installed on your system:
 
 - PHP 8.0 or later
@@ -35,7 +35,7 @@ To install YourGamePanel, you'll need to have the following dependencies install
 - Navigate to the YourGamePanel directory and run composer install to install the required dependencies.
 - `cd YourGamePanel`
 - composer install
-- Import the yourgamepanel.sql file into your MySQL database.
+- Import the server/yourgamepanel.sql file into your MySQL database.
 - `mysql -u <username> -p <database_name> < yourgamepanel.sql`
 - Edit the server/connection.php file with your MySQL database details.
 
