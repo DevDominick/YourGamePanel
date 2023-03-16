@@ -39,7 +39,7 @@ To install YourGamePanel, you'll need to have the following dependencies install
 - `mysql -u <username> -p <database_name> < yourgamepanel.sql`
 - Edit the server/connection.php file with your MySQL database details.
 
-# 💻Tech Stack <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = 32px> 
+## Tech Stack 💻
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Php](https://img.shields.io/badge/php-%230db7ed.svg?style=for-the-badge&logo=php&logoColor=white)
 
 ![alt text](https://github.com/FileBrute/YourGamePanel/blob/cc046de3628ed60f1ed44b152f64cf1c09ec9f59/img/Capture.PNG)
