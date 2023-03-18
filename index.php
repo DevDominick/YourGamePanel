@@ -3,7 +3,7 @@
 session_start();
  
  // require config
-require_once("../server/config.php");
+require_once("server/config.php");
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -87,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <head>
     <meta charset="utf-8">
-    <title>YourGamePanel - Dashboard Template</title>
+    <title>YourGamePanel - a</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -129,11 +129,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container-fluid">
             <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-1">
                         <div class="d-flex align-items-center justify-content-between mb-1">
-                            <a href="index.html" class="">
-                                <h3 class="text-primary"><i class="fa fa-user-edit me-1"></i>YourGamePanel</h3>
-                            </a>
                             <h3>Sign In</h3>
                         </div>
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
