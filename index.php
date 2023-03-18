@@ -31,38 +31,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare a select statement
         $sql = "SELECT id, username, password FROM users WHERE username = ?";
         
-        if($stmt = mysqli_prepare($link, $sql)){
+        if($stmt = $pdo->prepare($sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
+            $stmt->bindParam(1, $param_username, PDO::PARAM_STR);
             
             // Set parameters
             $param_username = $username;
             
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Store result
-                mysqli_stmt_store_result($stmt);
-                
+            if($stmt->execute()){
                 // Check if username exists, if yes then verify password
-                if(mysqli_stmt_num_rows($stmt) == 1){                    
+                if($stmt->rowCount() == 1){                    
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
-                    if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify($password, $hashed_password)){
-                            // Password is correct, so start a new session
-                            session_start();
-                            
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                            
-                            // Redirect user to welcome page
-                            header("location: app/dashboard");
-                        } else{
-                            // Password is not valid, display a generic error message
-                            $login_err = "Invalid username or password.";
-                        }
+                    $stmt->bindColumn("id", $id);
+                    $stmt->bindColumn("username", $username);
+                    $stmt->bindColumn("password", $hashed_password);
+                    $stmt->fetch(PDO::FETCH_BOUND);
+                    if(password_verify($password, $hashed_password)){
+                        // Password is correct, so start a new session
+                        session_start();
+                        
+                        // Store data in session variables
+                        $_SESSION["loggedin"] = true;
+                        $_SESSION["id"] = $id;
+                        $_SESSION["username"] = $username;                            
+                        
+                        // Redirect user to welcome page
+                        header("location: app/dashboard");
+                    } else{
+                        // Password is not valid, display a generic error message
+                        $login_err = "Invalid username or password.";
                     }
                 } else{
                     // Username doesn't exist, display a generic error message
@@ -73,13 +71,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
 
             // Close statement
-            mysqli_stmt_close($stmt);
+            unset($stmt);
         }
     }
     
     // Close connection
-    mysqli_close($link);
+    unset($pdo);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <head>
     <meta charset="utf-8">
-    <title>YourGamePanel - a</title>
+    <title>YourGamePanel - Login</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -143,11 +142,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <a href="">Forgot Password</a>
+                            <a href="forgotpw.php">Forgot Password</a>
                         </div>
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
                         <p class="text-center mb-0">Don't have an Account? <a href="register.php">Sign Up</a></p>
