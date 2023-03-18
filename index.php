@@ -2,8 +2,9 @@
 // Initialize the session
 session_start();
  
+ // require config
+require_once("../server/config.php");
 
- 
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -57,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: dashboard");
+                            header("location: app/dashboard");
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
