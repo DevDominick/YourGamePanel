@@ -24,10 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt = $pdo->prepare($sql);
             
             // Bind parameters
-            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-            
-            // Set parameters
             $param_username = trim($_POST["username"]);
+
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             
             // Attempt to execute the prepared statement
             $stmt->execute();
@@ -77,7 +76,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
             
             // Set parameters
-            $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             
             // Attempt to execute the prepared statement
