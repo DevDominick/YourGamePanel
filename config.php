@@ -1,13 +1,26 @@
 <?php
-// Configuration options
+
 #####################################
 #                                   #
 #          YourGamePanel            # 
 #                                   #
 #####################################
 
+// Configuration options
 $siteName = "YourGamePanel";
 $domain = "localhost";
+$description = "desc";
+
+// MySQL Database
+$DB_SERVER = "localhost";
+$DB_USERNAME = "root";
+$DB_PASSWORD = "";
+$DB_NAME = "data";
+
+
+// Design
+$logo = "url";
+
 
 // Payment Options
 $sellixApiKey = "your_sellix_api_key_here";

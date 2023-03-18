@@ -4,6 +4,7 @@ session_start();
  
  // require config
 require_once("server/config.php");
+include 'config.php';
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -86,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <head>
     <meta charset="utf-8">
-    <title>YourGamePanel - Login</title>
+    <title><?php echo $siteName ?> - Login</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">

@@ -1,6 +1,7 @@
 <?php
 // Include config file
 require_once "server/config.php";
+include 'config.php';
  
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
@@ -8,7 +9,7 @@ $username_err = $password_err = $confirm_password_err = "";
  
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+
     // Validate username
     if (empty(trim($_POST["username"]))) {
         $username_err = "Please enter a username.";
@@ -100,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="utf-8">
-    <title>YourGamePanel - Dashboard Template</title>
+    <title><?php echo $siteName ?> - Sign Up</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
