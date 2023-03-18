@@ -2,14 +2,7 @@
 // Initialize the session
 session_start();
  
-// Check if the user is already logged in, if yes then redirect him to dashboard page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: ../app/dashboard.php");
-    exit;
-}
- 
-// Include config file
-require_once "../server/config.php";
+
  
 // Define variables and initialize with empty values
 $username = $password = "";
